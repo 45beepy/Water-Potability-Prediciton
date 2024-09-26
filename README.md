@@ -48,5 +48,3 @@ Pre-trained models are included in `.pkl` files. If you want to retrain the mode
 Thanks to the contributors and open-source libraries that made this project possible.
 
 ---
-
-You can adjust this based on any additional information or specifics you'd like to include!
