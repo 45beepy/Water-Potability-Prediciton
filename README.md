@@ -1,5 +1,5 @@
 # Water Potability Prediction
-
+![Landing Site](wqt-home.png) 
 This project predicts whether water is potable (safe to drink) using machine learning models. The deployed web application allows users to input water quality parameters and obtain a prediction of potability, along with LIME explanations for model interpretability.
 
 ## Features
@@ -48,6 +48,6 @@ Pre-trained models are included in `.pkl` files. If you want to retrain the mode
 Thanks to the contributors and open-source libraries that made this project possible.
 
 ## Results
-![Landing Site](wqt-home.png) ![Results](prediction.png)
+![Result](prediction-1.png)
 
 ---
