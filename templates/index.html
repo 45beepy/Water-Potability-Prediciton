@@ -81,35 +81,37 @@
 
     <div class="container">
         <h1>Water Potability Prediction</h1>
-        <form action="/predict" method="POST">
-            <label for="ph">pH:</label>
-            <input type="text" name="ph" required>
-            
-            <label for="hardness">Hardness:</label>
-            <input type="text" name="hardness" required>
-            
-            <label for="solids">Solids:</label>
-            <input type="text" name="solids" required>
-            
-            <label for="chloramines">Chloramines:</label>
-            <input type="text" name="chloramines" required>
-            
-            <label for="sulfate">Sulfate:</label>
-            <input type="text" name="sulfate" required>
-            
-            <label for="conductivity">Conductivity:</label>
-            <input type="text" name="conductivity" required>
-            
-            <label for="organic_carbon">Organic Carbon:</label>
-            <input type="text" name="organic_carbon" required>
-            
-            <label for="trihalomethanes">Trihalomethanes:</label>
-            <input type="text" name="trihalomethanes" required>
-            
-            <label for="turbidity">Turbidity:</label>
-            <input type="text" name="turbidity" required>
+<form action="/predict" method="POST">
+    <label for="ph">pH:</label>
+    <input type="text" name="ph" placeholder="7.036752" required>
     
-            <button type="submit">Predict</button>
+    <label for="hardness">Hardness:</label>
+    <input type="text" name="hardness" placeholder="196.967627" required>
+    
+    <label for="solids">Solids:</label>
+    <input type="text" name="solids" placeholder="20927.833607" required>
+    
+    <label for="chloramines">Chloramines:</label>
+    <input type="text" name="chloramines" placeholder="7.130299" required>
+    
+    <label for="sulfate">Sulfate:</label>
+    <input type="text" name="sulfate" placeholder="333.073546" required>
+    
+    <label for="conductivity">Conductivity:</label>
+    <input type="text" name="conductivity" placeholder="421.884968" required>
+    
+    <label for="organic_carbon">Organic Carbon:</label>
+    <input type="text" name="organic_carbon" placeholder="14.218338" required>
+    
+    <label for="trihalomethanes">Trihalomethanes:</label>
+    <input type="text" name="trihalomethanes" placeholder="66.622485" required>
+    
+    <label for="turbidity">Turbidity:</label>
+    <input type="text" name="turbidity" placeholder="3.955028" required>
+
+    <button type="submit">Predict</button>
+</form>
+
         </form>
 
         {% if prediction_text %}
