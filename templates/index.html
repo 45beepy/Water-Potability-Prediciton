@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Water Potability Prediction</title>
     <style>
+        /* Apply the image as background */
         body {
             font-family: Arial, sans-serif;
             background: url('https://i.pinimg.com/originals/89/f1/ef/89f1eff452400efb88773462ec6a0107.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-size: cover; /* Ensure the image covers the entire viewport */
             margin: 0;
             padding: 0;
             display: flex;
@@ -16,7 +17,7 @@
             align-items: center;
             min-height: 100vh;
             overflow-y: auto;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px); /* Adds a blur effect for text readability */
         }
 
         .container {
@@ -73,53 +74,51 @@
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>Water Potability Prediction</h1>
-        <form id="potability-form" action="/predict" method="POST">
+        <form action="/predict" method="POST">
             <label for="ph">pH:</label>
-            <input type="text" id="ph" name="ph" placeholder="7.036752" required>
+            <input type="text" name="ph" required>
             
             <label for="hardness">Hardness:</label>
-            <input type="text" id="hardness" name="hardness" placeholder="196.967627" required>
+            <input type="text" name="hardness" required>
             
             <label for="solids">Solids:</label>
-            <input type="text" id="solids" name="solids" placeholder="20927.833607" required>
+            <input type="text" name="solids" required>
             
             <label for="chloramines">Chloramines:</label>
-            <input type="text" id="chloramines" name="chloramines" placeholder="7.130299" required>
+            <input type="text" name="chloramines" required>
             
             <label for="sulfate">Sulfate:</label>
-            <input type="text" id="sulfate" name="sulfate" placeholder="333.073546" required>
+            <input type="text" name="sulfate" required>
             
             <label for="conductivity">Conductivity:</label>
-            <input type="text" id="conductivity" name="conductivity" placeholder="421.884968" required>
+            <input type="text" name="conductivity" required>
             
             <label for="organic_carbon">Organic Carbon:</label>
-            <input type="text" id="organic_carbon" name="organic_carbon" placeholder="14.218338" required>
+            <input type="text" name="organic_carbon" required>
             
             <label for="trihalomethanes">Trihalomethanes:</label>
-            <input type="text" id="trihalomethanes" name="trihalomethanes" placeholder="66.622485" required>
+            <input type="text" name="trihalomethanes" required>
             
             <label for="turbidity">Turbidity:</label>
-            <input type="text" id="turbidity" name="turbidity" placeholder="3.955028" required>
+            <input type="text" name="turbidity" required>
     
             <button type="submit">Predict</button>
         </form>
 
-        <!-- The results section will be populated by Flask -->
-        <div id="result" class="result">
-            {% if prediction_text %}
-                <h2>{{ prediction_text }}</h2>
-            {% endif %}
-            {% if explanation %}
-                <h3>LIME Explanation:</h3>
-                <div>{{ explanation|safe }}</div>
-            {% endif %}
+        {% if prediction_text %}
+        <div class="result">
+            <h2>{{ prediction_text }}</h2>
+            <h3>LIME Explanation:</h3>
+            <div>{{ explanation | safe }}</div>
         </div>
+        {% endif %}
     </div>
 
 </body>
