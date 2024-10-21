@@ -47,4 +47,7 @@ Pre-trained models are included in `.pkl` files. If you want to retrain the mode
 ## Acknowledgments
 Thanks to the contributors and open-source libraries that made this project possible.
 
+## Results
+![Landing Site](wqt-home.png) ![Results](prediction.png)
+
 ---
